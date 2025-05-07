@@ -26,12 +26,12 @@ public class googleSearch {
     
     
     @Test
-    public void TestGoogleSearch() {
+    public void TestGoogleSearch() throws InterruptedException {
     	
     	driver.get("https://google.com");
     	driver.findElement(By.xpath("//*[@id='APjFqb']")).sendKeys("Selenium");
     	driver.findElement(By.xpath("//*[@id='APjFqb']")).sendKeys(Keys.ENTER);
-    	
+    	Thread.sleep(5000);
     }
     
     @AfterClass
